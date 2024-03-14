@@ -209,9 +209,9 @@ set N19ee5ea0 [stack 0]
 push $N19d8a2c0
  Expression {
   temp_name0 stmap_x
-  temp_expr0 x/(width-1)
+  temp_expr0 (x+0.5)/width
   temp_name1 stmap_y
-  temp_expr1 y/(height-1)
+  temp_expr1 (y+0.5)/height
   channel0 {rgba.red -rgba.green -rgba.blue none}
   expr0 (r*0.5/((width-1)/2))+stmap_x
   channel1 {-rgba.red rgba.green -rgba.blue none}
