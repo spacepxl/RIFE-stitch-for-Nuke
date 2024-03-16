@@ -1,6 +1,6 @@
 CatFileCreator {
- torchScriptFile RIFE.pt
- catFile RIFE.cat
+ torchScriptFile "\[python \{nuke.script_directory()\}]/Cattery/RIFE/RIFE.pt"
+ catFile "\[python \{nuke.script_directory()\}]/Cattery/RIFE/RIFE.cat"
  channelsIn rgba.red,rgba.green,rgba.blue,rgba.alpha,forward.u,forward.v,backward.u,backward.v
  channelsOut rgba.red,rgba.green,rgba.blue,rgba.alpha,depth.Z
  modelId RIFEv4
