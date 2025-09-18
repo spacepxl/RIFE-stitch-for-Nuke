@@ -190,14 +190,12 @@ class IFNet(nn.Module):
     def forward(
         self,
         x,
-        timestep: float = 0.5,
         scale_list: List[float] = (8.0, 4.0, 2.0, 1.0),
         ensemble: bool = False,
     ):
-        channel = x.shape[1] // 2
-        img0 = x[:, :channel]
-        img1 = x[:, channel:]
-        timestep = (x[:, :1].clone() * 0 + 1) * timestep
+        img0 = x[:, :4]
+        img1 = x[:, 4:8]
+        timestep = x[:, -1:]
         f0 = self.encode(img0[:, :3])
         f1 = self.encode(img1[:, :3])
         warped_img0 = img0
