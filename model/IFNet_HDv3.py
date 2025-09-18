@@ -194,8 +194,8 @@ class IFNet(nn.Module):
         ensemble: bool = False,
     ):
         img0 = x[:, :4]
-        img1 = x[:, 4:8]
-        timestep = x[:, -1:]
+        img1 = x[:, 5:]
+        timestep = x[:, 4:5]
         f0 = self.encode(img0[:, :3])
         f1 = self.encode(img1[:, :3])
         warped_img0 = img0
